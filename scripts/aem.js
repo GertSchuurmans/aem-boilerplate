@@ -625,8 +625,8 @@ async function loadBlock(block) {
   if (status !== 'loading' && status !== 'loaded') {
     block.dataset.blockStatus = 'loading';
     let { blockName } = block.dataset;
-    if (!!blockName) {
-      blockName = "table";
+    if (!blockName) {
+      blockName = 'table';
     }
     try {
       const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`);
