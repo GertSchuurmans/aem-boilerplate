@@ -672,7 +672,7 @@ async function loadBlocks(main) {
  * @param {Element} block The block element
  */
 function decorateBlock(block) {
-  const shortBlockName = 'table'; // block.classList[0];
+  const shortBlockName = block.classList[0];
   if (shortBlockName) {
     block.classList.add('block');
     block.dataset.blockName = shortBlockName;
